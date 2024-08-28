@@ -17,19 +17,30 @@ document.querySelector(".pbtm").addEventListener('click', (e) =>{
         getNewHit();
     }else{
         // check whether we clicked on the wrong box
-        // if(currentContent !== hitTextContent){
-        //     // handle wrong ans logic
-        // }else{
-        //     // show 
-        // }
+        if(currentContent !== hitTextContent){
+            // handle wrong ans logic
+            generateBubble();
+            decreaseScore();
+            getNewHit();
+        }else{
+            // show 
+        }
     }
 });
 
 
-
+  // increase score
 function increaseScore(){
     const scoreVariable = document.getElementById("score");
     score += 10;
+    scoreVariable.textContent = score;
+
+}
+
+ // decrease score
+function decreaseScore(){
+    const scoreVariable = document.getElementById("score");
+    score -= 10;
     scoreVariable.textContent = score;
 
 }
