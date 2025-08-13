@@ -81,3 +81,6 @@ html, body{
     color: #fff;
     background-color: #1f4b19;
 }
+.bubble:hover{
+    cursor: pointer;
+}
